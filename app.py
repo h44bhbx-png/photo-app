@@ -24,13 +24,11 @@ if uploaded_file is not None:
     
     if st.button("🚀 معالجة الصورة وإزالة الخلفية", use_container_width=True):
         with st.spinner("جاري المعالجة بالذكاء الاصطناعي، انتظر قليلاً..."):
-            try:
-                if st.button("معالجة الصورة وإزالة الخلفية", use_container_width=True):
+            if st.button("معالجة الصورة وإزالة الخلفية", use_container_width=True):
     with st.spinner("جاري المعالجة بالذكاء الاصطناعي، انتظر قليلاً..."):
-        try:
-            input_bytes = uploaded_file.read()
-            output_bytes = remove(input_bytes, model_name='u2netp')
-            output_image = Image.open(io.BytesIO(output_bytes)).convert("RGBA")
+        input_bytes = uploaded_file.read()
+        output_bytes = remove(input_bytes, model_name='u2netp')
+        output_image = Image.open(io.BytesIO(output_bytes)).convert("RGBA")
 
                 
                 # إزالtry:
