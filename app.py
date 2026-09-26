@@ -27,8 +27,8 @@ if uploaded_file is not None:
             try:
                 input_bytes = uploaded_file.read()
                 
-                # إزالة الخلفية
-                output_bytes = remove(input_bytes)
+                # إزالة output = remove(input_image, model_name='u2netp')
+
                 output_image = Image.open(io.BytesIO(output_bytes)).convert("RGBA")
 
                 # تحديد ألوان الخلفية
