@@ -27,7 +27,14 @@ if uploaded_file is not None:
             try:
                 input_bytes = uploaded_file.read()
                 
-                # إزالة output = remove(input_image, model_name='u2netp')
+                # إزالtry:
+    input_bytes = uploaded_file.read()
+    
+    # السطر الصحيح لإزالة الخلفية بالنموذج الخفيف:
+    output_bytes = remove(input_bytes, model_name='u2netp')
+    
+    output_image = Image.open(io.BytesIO(output_bytes)).convert("RGBA")
+ة output = remove(input_image, model_name='u2netp')
 
                 output_image = Image.open(io.BytesIO(output_bytes)).convert("RGBA")
 
